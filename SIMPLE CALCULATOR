@@ -1,0 +1,61 @@
+#include<iostream>
+using namespace std;
+int main(){
+    float num1, num2, res;   
+    int choice;
+    do{
+    	cout<<"\n^^^ SIMPLE CALCULATOR ^^^\n";
+        cout<<"\n1. Addition\n";
+        cout<<"2. Subtraction\n";
+        cout<<"3. Multiplication\n";
+        cout<<"4. Division\n";
+        cout<<"5. Exit\n";
+        cout<<"\nEnter Your Choice(1-5): ";
+        cin>>choice;
+        if(choice>=1 && choice<=4){
+        	if(choice==1){
+            	cout<<"\n+++>>You have selected the Addition Operation.";
+			}
+		    else if(choice==2){
+				cout<<"\n--->>You have selected the Subtraction Operation.";
+			}
+		    else if(choice==3){
+				cout<<"\n***>>You have selected the Multiplication Operation.";
+			}
+		    else if(choice==4){
+				cout<<"\n///>>You have selected the Division Operation.";
+			}
+            cout<<"\nEnter the Number1 : ";
+            cin>>num1;
+            cout<<"Enter the Number2 : ";
+            cin>>num2;
+            
+        }
+        switch(choice){
+            case 1:
+                res = num1+num2;
+                cout<<"\n--->>The Sum of two number is "<<res;
+                break;
+            case 2:
+                res = num1-num2;
+                cout<<"\n--->>The Subtraction of two number is "<<res;
+                break;
+            case 3:
+                res = num1*num2;
+                cout<<"\n--->>The Product of two number is "<<res;
+                break;
+            case 4:
+                res = num1/num2;
+                cout<<"\n--->>The difference of two number is "<<res;
+                break;
+            case 5:
+                return 0;
+            default:
+                cout<<"\n--->>Something went wrong..!!";
+                break;
+        }
+        cout<<"                        \n";
+    }while(choice!=5);
+    cout<<endl;
+    return 0;
+}
